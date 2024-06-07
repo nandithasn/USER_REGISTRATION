@@ -1,0 +1,16 @@
+{% extends 'dummy.html' %}
+{% block title %}
+<title> profile details</title>
+{% endblock %}
+
+
+{% block body_block %}
+    <form method="POST">
+        {% csrf_token %}
+        
+        <h1>username is:{{UO.username}}</h1>
+       <h1>email is: {{UO.email}}</h1>
+        <h1>address is:{{PO.address}}</h1>
+        <img src="{{PO.profile.url}}" alt="">
+    </form>
+{% endblock %}
